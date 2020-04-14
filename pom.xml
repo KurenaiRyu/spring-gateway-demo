@@ -8,8 +8,8 @@
     <version>2.2.6.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-  <groupId>com.iotlead.beex.gateway</groupId>
-  <artifactId>beex-api-gateway</artifactId>
+  <groupId>io.github.natsusai.gateway</groupId>
+  <artifactId>spring-gateway-demo</artifactId>
   <version>1.0-RELEASE</version>
   <name>beex-api-gateway</name>
   <description>Beex API Gateway</description>
