@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: beex-api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes:
+        - id: beex-api-shop
+          uri: lb://beex-api-shop
+          order: 0
+          predicates:
+            - Path=/api/shop/**
+          filters:
+            - StripPrefix=2
+        - id: beex-api-core
+          uri: lb://beex-api-core
+          order: 0
+          predicates:
+            - Path=/api/core/**
+          filters:
+            - StripPrefix=2
+jwt:
+  secret: 123123123123sjdfkjkajsdfjlklasdj

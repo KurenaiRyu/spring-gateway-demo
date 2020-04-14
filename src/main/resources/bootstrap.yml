@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  profiles:
+    active: dev
+  application:
+    name: beex-api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.8.252:8848
+        namespace: 0f1b4ddb-79ea-466c-bd78-b75c1ce8d767
+      config:
+        namespace: 0f1b4ddb-79ea-466c-bd78-b75c1ce8d767
+        server-addr: 192.168.8.252:8848
+        file-extension: yaml
