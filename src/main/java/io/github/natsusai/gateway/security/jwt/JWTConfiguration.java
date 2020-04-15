@@ -14,11 +14,6 @@ import org.springframework.context.annotation.Configuration;
 public class JWTConfiguration {
 
   @Bean
-  public JWTFilter jwtFilter(JWTProperties jwtProperties, TokenProvider tokenProvider) {
-    return new JWTFilter(jwtProperties, tokenProvider);
-  }
-
-  @Bean
   public TokenProvider tokenProvider(JWTProperties jwtProperties) {
     return new TokenProvider(jwtProperties);
   }
