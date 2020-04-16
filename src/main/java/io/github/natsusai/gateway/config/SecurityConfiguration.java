@@ -1,8 +1,8 @@
 package io.github.natsusai.gateway.config;
 
 import io.github.natsusai.gateway.security.CustomReactiveAuthorizationManager;
-import io.github.natsusai.gateway.security.jwt.JWTServerAuthenticationConverter;
 import io.github.natsusai.gateway.security.jwt.JWTReactiveAuthenticationManager;
+import io.github.natsusai.gateway.security.jwt.JWTServerAuthenticationConverter;
 import io.github.natsusai.gateway.security.jwt.JWTServerAuthenticationSuccessHandler;
 import io.github.natsusai.gateway.security.jwt.TokenProvider;
 import org.springframework.context.annotation.Bean;
@@ -37,6 +37,7 @@ public class SecurityConfiguration {
 
     return http
         // 取消Security默认配置
+        .cors().disable()
         .csrf().disable()
         .httpBasic().disable()
         .formLogin().disable()
