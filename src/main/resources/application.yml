@@ -21,5 +21,9 @@ spring:
             - Path=/api/core/**
           filters:
             - StripPrefix=2
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
 jwt:
   secret: 123123123123sjdfkjkajsdfjlklasdj
